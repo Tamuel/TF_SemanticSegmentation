@@ -10,8 +10,8 @@ Semantic image segmentation network which inspired by Google **DeepLabV3**. We u
 |---|---|
 |DeepLabV3 (Paper) | 77.21 |
 |DeepLabV3 (Regenerated) | 76.68 |
-|ResNet101 V1 + PAC | 76.97 |
-|ResNet101 V1 + BAL | 77.64 |
+|ResNet101 V2 + PAC | 76.97 |
+|ResNet101 V2 + BAL | 77.64 |
 |ResNet101 V1 + PAC + BAL | 78.07 |
 
 ## PAC module & BAL
