@@ -9,7 +9,7 @@ Semantic image segmentation network which inspired by Google **DeepLabV3**. We u
 | Network | mIoU |
 |---|---|
 |DeepLabV3 (Paper) | 77.21 |
-|DeepLabV3 (Regenerated) | 76.68 |
+|DeepLabV3 (Regenerated, ResNet101 V2) | 76.68 |
 |ResNet101 V2 + PAC | 76.97 |
 |ResNet101 V2 + BAL | 77.64 |
 |ResNet101 V1 + PAC + BAL | 78.07 |
