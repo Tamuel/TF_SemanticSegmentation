@@ -6,6 +6,13 @@
 Semantic image segmentation network which inspired by Google **DeepLabV3**. We use the ResNet as backbone network for high quailty feature extraction. And we design the **Pyramid Atrous Convolution** module which employ atrous convolution with multi atrous rate which use same filters. It makes not only the network robust to multiple scales but also reduce the number of parameters for filters. In network learning phase, we apply **Boundary-Aware Loss** which can make network focus on hard region of input image like **Hard Example Mining** in object detection area.
 
 ## Performance
+|**DeepLabV3**||
+|--|--|
+|Output Stride|16|
+|Multi-Grid|1, 2, 4|
+|ASPP|6, 12, 18|
+|Image Pooling|True|
+
 | Network | mIoU |
 |---|---|
 |DeepLabV3 (Paper) | 77.21 |
