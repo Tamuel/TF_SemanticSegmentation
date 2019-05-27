@@ -3,7 +3,7 @@
 [Paper](https://github.com/Tamuel/TF_SemanticSegmentation/blob/master/Semantic%20Image%20Segmentation%20with%20Pyramid%20Atrous%20Convolution%20and%20Boundary-aware%20Loss%20Paper%20(Dongkyu%20Yu%20_%20POSTECH).pdf)
 
 ## Overview
-Semantic image segmentation network which inspired by Google **DeepLabV3**. We use the ResNet as backbone network for high quailty feature extraction. And we design the **Pyramid Atrous Convolution (PAC)** module which employ atrous convolution with multi atrous rate which use same filters. It makes not only the network robust to multiple scales but also reduce the number of parameters for filters. In network learning phase, we apply **Boundary-Aware Loss (BAL)** which can make network focus on hard region of input image like **Hard Example Mining** in object detection area.
+Semantic image segmentation network which inspired by Google **DeepLabV3**. We use the ResNet as backbone network for high quality feature extraction. And we design the **Pyramid Atrous Convolution (PAC)** module which employ atrous convolution with multi atrous rate which use same filters. It makes not only the network robust to multiple scales but also reduce the number of parameters for filters. In network learning phase, we apply **Boundary-Aware Loss (BAL)** which can make network focus on hard region of input image like **Hard Example Mining** in object detection area.
 
 ## Performance
 |**DeepLabV3**||

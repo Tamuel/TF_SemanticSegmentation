@@ -34,16 +34,16 @@ flags.DEFINE_string('data_dir', './dataset/',
 flags.DEFINE_boolean('clean_model_dir', False,
                      'Whether to clean up the model directory if present.')
 
-flags.DEFINE_integer('train_epochs', 100,
+flags.DEFINE_integer('train_epochs', 46,
                      'Number of training epochs.')
 
 flags.DEFINE_integer('epochs_per_eval', 1,
                      'The number of training epochs to run between evaluations.')
 
-flags.DEFINE_integer('batch_size', 4,
+flags.DEFINE_integer('batch_size', 16,
                      'Size of batch.')
 
-flags.DEFINE_integer('max_iter', 40000,
+flags.DEFINE_integer('max_iter', 30000,
                      'Number of maximum iteration used for "poly" learning rate policy.')
 
 flags.DEFINE_integer('initial_global_step', 0,
@@ -52,7 +52,7 @@ flags.DEFINE_integer('initial_global_step', 0,
 flags.DEFINE_integer('output_stride', 16,
                      'Output stride for DeepLab v3. Currently 8 or 16 is supported.')
 
-flags.DEFINE_float('initial_learning_rate', 0.005,
+flags.DEFINE_float('initial_learning_rate', 0.007,
                    'Initial learning rate for the optimizer.')
 
 flags.DEFINE_float('end_learning_rate', 0,
