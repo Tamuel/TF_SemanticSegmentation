@@ -68,20 +68,6 @@ def main(unused_argv):
         }
     ).model_fn(features, labels, tf.estimator.ModeKeys.EVAL).predictions
 
-    # predictions = deeplab_model.deeplabv3_model_fn(
-    #     features,
-    #     labels,
-    #     tf.estimator.ModeKeys.EVAL,
-    #     params={
-    #         'output_stride': FLAGS.output_stride,
-    #         'batch_size': 1,  # Batch size must be 1 because the images' size may differ
-    #         'base_architecture': FLAGS.base_architecture,
-    #         'pre_trained_model': None,
-    #         'batch_norm_decay': None,
-    #         'num_classes': _NUM_CLASSES,
-    #         'freeze_batch_norm': True
-    #     }).predictions
-
     # Manually load the latest checkpoint
     saver = tf.train.Saver()
     with tf.Session() as sess:

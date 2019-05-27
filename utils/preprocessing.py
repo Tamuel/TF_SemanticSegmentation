@@ -1,10 +1,8 @@
 
 """Utility functions for preprocessing data sets."""
 
-from PIL import Image
 import numpy as np
 import tensorflow as tf
-from matplotlib import pyplot as plt
 
 _R_MEAN = 123.68
 _G_MEAN = 116.78

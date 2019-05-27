@@ -20,7 +20,6 @@ source: https://github.com/tensorflow/models/blob/master/research/object_detecti
 import tensorflow as tf
 from multiprocessing.pool import ThreadPool
 from threading import Lock
-from utils.preprocessing import decode_shi_labels
 import numpy as np
 from time import time, sleep
 from PIL import Image
@@ -28,7 +27,6 @@ import sys
 import os
 import cv2
 from utils.base_util import is_image, random_select, random_integers, Timer
-from matplotlib import pyplot as plt
 from random import shuffle
 
 

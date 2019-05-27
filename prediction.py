@@ -3,7 +3,6 @@ from utils.preprocessing import *
 from network.seg_resnetV1_aspp_crossLoss_simpleDecoder import Segmentator
 import numpy as np
 from PIL import Image
-from matplotlib import pyplot as plt
 from utils.base_util import Timer
 
 config = tf.ConfigProto()
@@ -18,7 +17,8 @@ flags.DEFINE_integer('num_gpu', 1,
                      'Number of GPUs to use.')
 
 model_dir = './test_model'
-file_dir = './test_input'
+input_dir = './test_input'
+output_dir = './test_output'
 
 sess = tf.Session()
 input_image = tf.placeholder(dtype=tf.float32, shape=[None, None, None, 3])
@@ -51,12 +51,12 @@ get_ckpt = tf.train.init_from_checkpoint(
 sess.run(tf.global_variables_initializer())
 
 print('[Read images]')
-file_list = os.listdir(file_dir)
+file_list = os.listdir(input_dir)
 images = list()
 for i, f in enumerate(file_list):
     if i == 30:
         break
-    f = os.path.join(file_dir, f)
+    f = os.path.join(input_dir, f)
     img = np.array(Image.open(f)).astype(np.float32)
     images.append(img)
 
@@ -86,5 +86,5 @@ for idx, i in enumerate(images):
     decoded = decode_labels(np.array(predictions).astype(np.uint8))
     timer.check()
     segment_image = decoded[0]
-    Image.fromarray(segment_image.astype(np.uint8)).save('./test_output/' + file_list[idx])
+    Image.fromarray(segment_image.astype(np.uint8)).save(os.path.join(output_dir, file_list[idx]))
 
