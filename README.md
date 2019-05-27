@@ -37,7 +37,7 @@ Semantic image segmentation network which inspired by Google **DeepLabV3**. We u
 * ```Numpy, CV2, PIL, etc```
 
 ## Network checkpoints
-* [model](https://drive.google.com/open?id=1YFcbw-5nL33Ii9Zm81n2MQLSml1Gu3M0)
+* [model](https://drive.google.com/open?id=1YFcbw-5nL33Ii9Zm81n2MQLSml1Gu3M0) (ResNet101 V1 + PAC + BAL)
 * [resnet_v1_101_beta](https://drive.google.com/open?id=1-jSkSjQcAYBfJX_imShkNtQI6sUyuX-s)
 
 ## Usage
