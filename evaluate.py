@@ -10,7 +10,7 @@ import sys
 
 import tensorflow as tf
 
-from network.segmentator_model import Segmentator
+from network.seg_resnetV1_pac_bal_simpleDecoder import Segmentator
 from utils import preprocessing
 from utils import dataset_util
 

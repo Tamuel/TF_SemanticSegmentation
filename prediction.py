@@ -1,6 +1,6 @@
 import os
 from utils.preprocessing import *
-from network.seg_resnetV1_aspp_crossLoss_simpleDecoder import Segmentator
+from network.seg_resnetV1_pac_bal_simpleDecoder import Segmentator
 import numpy as np
 from PIL import Image
 from utils.base_util import Timer

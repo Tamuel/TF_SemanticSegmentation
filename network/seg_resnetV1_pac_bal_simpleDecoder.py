@@ -184,7 +184,7 @@ class Segmentator:
         label_weights, edge_image = seg_modify_gradient_weight(
             labels, remain_rate=0.5, image_summary=True)
 
-        cross_entropy = tf.losses.softmax_cross_entropy(
+        boundary_aware_loss = tf.losses.softmax_cross_entropy(
             onehot_labels=one_hot_labels,
             logits=tf.reshape(logits, [-1, params['num_classes']]),
             weights=not_ignore_mask * tf.reshape(label_weights, [-1])
@@ -193,7 +193,7 @@ class Segmentator:
         regularization_losses = tf.get_collection(
                     tf.GraphKeys.REGULARIZATION_LOSSES)
 
-        loss = cross_entropy + tf.add_n(regularization_losses)
+        loss = boundary_aware_loss + tf.add_n(regularization_losses)
 
         accuracy = tf.metrics.accuracy(
             labels_flat, preds_flat,
